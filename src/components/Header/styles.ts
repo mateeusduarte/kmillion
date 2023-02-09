@@ -9,9 +9,12 @@ export const HeaderContainer = styled.div`
   box-shadow: 0 4px 17px #0000004d;
   width: 100%;
   height: 64px;
+  margin-bottom: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  z-index: 100;
 `;
 
 export const HeaderContent = styled.div`
@@ -29,7 +32,7 @@ export const HeaderLink = styled(Link)<THeaderLinkProps>`
   }
 `;
 
-export const HeaderButton = styled.a`
+export const HeaderButton = styled(Link)`
   font-size: 16px;
   padding: 10px 32px;
   border-radius: 30px;
@@ -38,4 +41,9 @@ export const HeaderButton = styled.a`
   box-shadow: 0 4px 17px #0000004d;
   border: none;
   cursor: pointer;
+  :hover {
+    background-color: #b66315;
+  }
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  text-decoration: none;
 `;

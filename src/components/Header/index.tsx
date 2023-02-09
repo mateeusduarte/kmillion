@@ -1,8 +1,8 @@
 import messages from '@/common/constants/messages';
 import sessions from '@/common/constants/sessions';
+import { scrollToSession } from '@/common/helpers/scroll';
+import { sessionState } from '@/common/state/session';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import { HEADER_LINKS } from './constants';
 import {
   HeaderButton,
@@ -12,15 +12,7 @@ import {
 } from './styles';
 
 export default function Header() {
-  const router = useRouter();
-  const [currentSession, setCurrentSession] = useState(() =>
-    router.asPath.substring(2)
-  );
-
-  useEffect(() => {
-    setCurrentSession(router.asPath.substring(2));
-  }, [router.asPath, router]);
-
+  const currentSession = sessionState.get({ noproxy: true });
   return (
     <header>
       <HeaderContainer>
@@ -38,7 +30,7 @@ export default function Header() {
                 href={`#${link.session}`}
                 key={`${index} - ${link.text}`}
                 isSelected={isSelected}
-                onClick={() => setCurrentSession(link.session)}
+                onClick={(e) => scrollToSession(e, link.session)}
               >
                 {link.text}
               </HeaderLink>
@@ -47,7 +39,7 @@ export default function Header() {
         </HeaderContent>
         <HeaderButton
           href={`#${sessions.contact}`}
-          onClick={() => setCurrentSession(sessions.contact)}
+          onClick={(e) => scrollToSession(e, sessions.contact)}
         >
           {messages.headerButton}
         </HeaderButton>

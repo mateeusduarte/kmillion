@@ -1,6 +1,8 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
 import messages from '@/common/constants/messages';
+import Header from '@/components/Header';
+import HomeSession from '@/components/HomeSession';
+import MainFeaturesSession from '@/components/MainFeaturesSession';
 
 export default function Home() {
   return (
@@ -9,7 +11,11 @@ export default function Home() {
         <title>{messages.headTitle}</title>
         <link rel="icon" href="/favicon.ico?" />
       </Head>
-      <main className={styles.main}></main>
+      <main>
+        <Header />
+        <HomeSession />
+        <MainFeaturesSession />
+      </main>
     </>
   );
 }
