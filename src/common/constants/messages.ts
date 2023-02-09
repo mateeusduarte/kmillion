@@ -37,5 +37,62 @@ const messages = {
 
   clientCommunicationDescription:
     'Nosso software permite a comunicação com o cliente, o informando sobre novas promoções',
+
+  moreFeaturesTitle: 'A Kmillion oferece tudo isso e muito mais!',
+
+  centralizationTitle: 'Centralização da gestão',
+
+  centralizationDescription:
+    'Gestão de todas as cregras de campanhas, assim como definição de canais de venda',
+
+  portabilityTitle: 'Portabilidade de ambiente',
+
+  portabilityDescription:
+    'Nossa plataforma conta com recursos que permitem que o motor de cálculo do Kmillion possa ser instalada em ambiente cloud ou on-premise.',
+
+  crossRetailersTitle: 'Campanhas entre varejistas',
+
+  crossRetailersDescription:
+    'Permitimos que varejistas de marcas diferentes possam fazer campanhas promocionais conjuntas.',
+
+  simulatorTitle: 'Simulador de cenários',
+
+  simulatorDescription:
+    'Ambiente de testes disponivel para simular cenários de visualização de campanhas e comparar resultados',
+
+  integrationTitle: 'Integração simples',
+
+  integrationDescription:
+    'Processo de integração simples, ampliando a disponibilidade das ações promocionais em todos os canais de vendas.',
+
+  computerIconAlt: 'Icone de um computador',
+
+  cloudIconAlt: 'Icone de uma núvem',
+
+  simulatorIconAlt:
+    'Icone de duas telas representando um ambiente de simulação.',
+
+  integrationIconAlt: 'Icone de uma engrenagem representando uma integração',
+
+  moneyOnlineIconAlt: 'Icone de uma nota de dinheiro em um computador',
+
+  discountNumberTitle: '+11MI',
+
+  shoppingCartsTitle: '+105MI',
+
+  couponsDistributedTitle: '+1MI',
+
+  clientsTitle: '+2MI',
+  clientsDescription: 'clientes atendidos',
+
+  engagementTitle: '+15%',
+
+  pdvsTitle: '+5K',
+
+  transactionsTitle: '+16BI',
+
+  salesChannelsTitle: '15',
+
+  contactSessionTitle: 'Entre em contato conosco',
 };
 export default messages;

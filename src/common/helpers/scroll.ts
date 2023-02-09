@@ -1,4 +1,3 @@
-import { changeSession } from './../state/session';
 import { MouseEvent } from 'react';
 
 export const scrollToSession = (
@@ -9,5 +8,4 @@ export const scrollToSession = (
   let position = document.getElementById(session);
   window.location.href = '#' + session; // changing the url
   position && position.scrollIntoView({ behavior: 'smooth', block: 'start' }); //scrolling the page
-  changeSession(session);
 };

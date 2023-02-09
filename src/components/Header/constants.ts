@@ -12,10 +12,6 @@ export const HEADER_LINKS: THeaderLinks[] = [
     text: messages.featuresHeaderLink,
   },
   {
-    session: sessions.aboutUs,
-    text: messages.aboutUsHeaderLink,
-  },
-  {
     session: sessions.numbers,
     text: messages.numbersHeaderLink,
   },

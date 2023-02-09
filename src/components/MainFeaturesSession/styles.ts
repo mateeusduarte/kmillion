@@ -1,6 +1,8 @@
+import { TFeatureTitleProps } from './types';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import breakpoints from '@/common/constants/breakpoints';
 
 export const MainFeaturesSessionContainer = styled.div`
   display: flex;
@@ -12,25 +14,49 @@ export const MainFeaturesSessionContainer = styled.div`
 
 export const MainFeaturesContainer = styled.div`
   min-height: 650px;
-  width: 60%;
+  width: 80%;
   background: white;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 60px;
+  @media only screen and ${breakpoints.device.cel} {
+    width: 100%;
+  }
+  @media only screen and ${breakpoints.device.tablet} {
+    width: 100%;
+  }
 `;
 
 export const FeatureContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 60px 20px 60px;
+  padding: 60px 0px 20px 60px;
+  @media only screen and ${breakpoints.device.cel} {
+    padding: 60px 10px;
+  }
+  @media only screen and ${breakpoints.device.tablet} {
+    padding: 60px 10px;
+  }
 `;
 
 export const FeatureContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 50%; ;
+  padding: 0 10px;
+  width: 50%;
+  @media only screen and ${breakpoints.device.cel} {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  @media only screen and ${breakpoints.device.tablet} {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 export const FeatureImageContainer = styled.div`
@@ -38,6 +64,12 @@ export const FeatureImageContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @media only screen and ${breakpoints.device.cel} {
+    display: none;
+  }
+  @media only screen and ${breakpoints.device.tablet} {
+    display: none;
+  }
 `;
 export const FeatureImageBackground = styled.div`
   background: #eb9c52;
@@ -49,10 +81,12 @@ export const FeatureImageBackground = styled.div`
 `;
 export const FeatureImage = styled(Image)``;
 
-export const FeatureTitle = styled.h2`
+export const FeatureTitle = styled.h2<TFeatureTitleProps>`
   mark {
-    -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
-    animation: 1.5s highlight 1.5s 1 normal forwards;
+    -webkit-animation: ${({ isVisible }) =>
+      isVisible && ' 1s highlight 1s 1 normal forwards'};
+    animation: ${({ isVisible }) =>
+      isVisible && ' 1s highlight 1s 1 normal forwards'};
     background-color: none;
     background: linear-gradient(90deg, #eb9c52 50%, rgba(255, 255, 255, 0) 50%);
     background-size: 200% 100%;
@@ -62,12 +96,16 @@ export const FeatureTitle = styled.h2`
   @-webkit-keyframes highlight {
     to {
       background-position: 0 0;
+      color: white;
+      padding: 0 10px;
     }
   }
 
   @keyframes highlight {
     to {
       background-position: 0 0;
+      color: white;
+      padding: 0 10px;
     }
   }
   color: #606060;
@@ -90,6 +128,7 @@ export const FeatureButton = styled(Link)`
   font-weight: 700;
   background-color: #eb9c52;
   color: white;
+  white-space: nowrap;
   border: none;
   outline: none;
   box-shadow: 0 3px 6px #00000029;

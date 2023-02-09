@@ -1,6 +1,7 @@
 import { THeaderLinkProps } from './types';
 import Link from 'next/link';
 import styled from 'styled-components';
+import breakpoints from '@/common/constants/breakpoints';
 
 export const HeaderContainer = styled.div`
   position: fixed;
@@ -30,6 +31,12 @@ export const HeaderLink = styled(Link)<THeaderLinkProps>`
   :hover {
     color: #e85612;
   }
+  @media only screen and ${breakpoints.device.cel} {
+    display: none;
+  }
+  @media only screen and ${breakpoints.device.tablet} {
+    display: none;
+  }
 `;
 
 export const HeaderButton = styled(Link)`
@@ -46,4 +53,7 @@ export const HeaderButton = styled(Link)`
   }
   transition: background-color 0.2s ease-out, color 0.2s ease-out;
   text-decoration: none;
+  @media only screen and ${breakpoints.device.cel} {
+    display: none;
+  }
 `;

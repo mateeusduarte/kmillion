@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "@hookstate/core": "^4.0.0",
@@ -16,13 +16,17 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "formik": "^2.2.9",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-input-mask": "^2.0.4",
     "styled-components": "^5.3.6",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "yup": "^1.0.0"
   },
   "devDependencies": {
+    "@types/react-input-mask": "^3.0.2",
     "@types/styled-components": "^5.1.26"
   }
 }
