@@ -63,7 +63,7 @@ export const HomeImageContainer = styled.div`
 
 export const HomeImage = styled(Image)`
   position: absolute;
-  bottom: -114px;
+  bottom: -100px;
   left: 100px;
 `;
 

@@ -14,7 +14,7 @@ export const MainFeaturesSessionContainer = styled.div`
 
 export const MainFeaturesContainer = styled.div`
   min-height: 650px;
-  width: 80%;
+  width: 70%;
   background: white;
   display: flex;
   flex-wrap: wrap;
@@ -33,11 +33,14 @@ export const FeatureContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 60px 0px 20px 60px;
+  width: 80%;
   @media only screen and ${breakpoints.device.cel} {
     padding: 60px 10px;
+    width: 100%;
   }
   @media only screen and ${breakpoints.device.tablet} {
     padding: 60px 10px;
+    width: 100%;
   }
 `;
 
@@ -77,7 +80,7 @@ export const FeatureImageBackground = styled.div`
   height: 350px;
   position: relative;
   left: -24px;
-  border-radius: 800px;
+  border-radius: 80px;
 `;
 export const FeatureImage = styled(Image)``;
 

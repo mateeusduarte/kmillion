@@ -9,7 +9,7 @@ export default function MainFeaturesSession() {
       <MainFeaturesContainer>
         <Feature
           imgAlt={messages.homePicAlt}
-          imgSrc={'/uau.webp'}
+          imgSrc={'/feat1.png'}
           title={
             <>
               Criação de <mark>mecânicas</mark> e{' '}
@@ -20,7 +20,7 @@ export default function MainFeaturesSession() {
         />
         <Feature
           imgAlt={messages.homePicAlt}
-          imgSrc={'/uau.webp'}
+          imgSrc={'/feat2.png'}
           title={
             <>
               Campanhas de <mark>Cuponagem</mark> & <mark>Cashback</mark>
@@ -31,7 +31,7 @@ export default function MainFeaturesSession() {
         />
         <Feature
           imgAlt={messages.homePicAlt}
-          imgSrc={'/uau.webp'}
+          imgSrc={'/feat3.png'}
           title={
             <>
               Recomendações de <mark>UpSelling</mark>

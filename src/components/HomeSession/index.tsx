@@ -30,8 +30,8 @@ export default function HomeSession() {
           <HomeImage
             src="/home-pic.png"
             alt={messages.homePicAlt}
-            width={473}
-            height={615}
+            width={450}
+            height={600}
           />
         </HomeImageContainer>
       </HomeContainer>
